@@ -194,7 +194,7 @@ outline:0;
   /*position: relative;*/
   width: 54px;
   height: 54px;
-  padding: 6px 5px 3px 5px;
+  /*padding: 6px 5px 3px 5px;*/
   outline: none;
   border-radius: 100%;
   text-align: center;
@@ -202,20 +202,20 @@ outline:0;
 }
 
 .main2 .button span {
-/*  display: inline-block;
-  position: relative;*/
-  position: absolute;
-  display: block;
+  display: inline-block;
+  position: relative;
+/*  position: absolute;
+  display: block;*/
   padding-top: 0px;
   padding-right: 0px;
 }
 .main2 .button span:after {
   content: url(path.png);
-  position: absolute;
-  display: block;
-  /*width: 20px;*/
-  vertical-align: middle;
-  width: 15px;
+ /* position: absolute;
+  display: block;*/
+  width: 20px;
+  /*vertical-align: middle;*/
+  /*width: 15px;*/
   opacity: 0;
   transition: 0.5s;
 }
@@ -231,6 +231,17 @@ outline:0;
 .main2 .button:focus {
   outline:3;
 }
+
+#about{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #111;
+  margin-top: 0.4em;
+  margin-left: 0em;
+  right: 30px;
+}
+
 
 .axis path,
 .axis line {
