@@ -202,19 +202,19 @@ outline:0;
 }
 
 .main2 .button span {
-/*  display: inline-block;
-  position: relative;*/
-  position: absolute;
-  display: block;
+  display: inline-block;
+  position: relative;
+  /*  position: absolute;
+  display: block;*/
   padding-top: 0px;
   padding-right: 0px;
 }
 .main2 .button span:after {
   content: url(path.png);
-  position: absolute;
-  display: block;
-  /*width: 20px;*/
-  vertical-align: middle;
+   /*position: absolute;
+  display: block;*/
+  /*width: 20px;
+  vertical-align: middle;*/
   width: 15px;
   opacity: 0;
   transition: 0.5s;
