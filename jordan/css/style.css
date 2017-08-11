@@ -204,18 +204,30 @@ outline:0;
 .main2 .button span {
   display: inline-block;
   position: relative;
+<<<<<<< HEAD
 /*  position: absolute;
+=======
+  /*  position: absolute;
+>>>>>>> origin/master
   display: block;*/
   padding-top: 0px;
   padding-right: 0px;
 }
 .main2 .button span:after {
   content: url(path.png);
+<<<<<<< HEAD
  /* position: absolute;
   display: block;*/
   width: 20px;
   /*vertical-align: middle;*/
   /*width: 15px;*/
+=======
+   /*position: absolute;
+  display: block;*/
+  /*width: 20px;
+  vertical-align: middle;*/
+  width: 15px;
+>>>>>>> origin/master
   opacity: 0;
   transition: 0.5s;
 }
