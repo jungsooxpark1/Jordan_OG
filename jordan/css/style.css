@@ -218,6 +218,7 @@ p {
     background-color: white;
     list-style: none;
     clear: both;
+    /*margin: auto;*/
     padding-top: 0em;
     opacity: 1;
     z-index: 10;
@@ -226,26 +227,32 @@ p {
 .about-pack {
   position: absolute;
   display: inherit;
-  width: 500px;
+  width: 600px;
   text-align: center;
   top: 40px;
-  margin: 0px 233px 0px 233px;
+  /*margin: 0px 184px 0px 184px;*/
+  /*margin: auto;*/
   /*padding: auto;*/
-  float: center;
+  /*float: center;*/
   z-index: 12;
+  left: 50%;
+  transform: translate(-50%)
 }
 
 .about-pack2 {
   position: absolute;
   display: inherit;
-  width: 500px;
+  width: 600px;
   text-align: center;
   bottom: 46px;
-  margin: 0px 233px 0px 233px;
+  /*margin: 0px 233px 0px 233px;*/
+  margin: auto;
   color: white;
   /*padding: auto;*/
   float: center;
   z-index: 12;
+  left: 50%;
+  transform: translate(-50%)
 }
 
 .cover-v{
@@ -428,7 +435,7 @@ outline:0;
   font-weight: 300;
   color: #000;
   vertical-align: middle;
-  top: 160px; 
+  top: 100px; 
   background-color: rgba(255, 255, 255, 1);
   border: 0px solid #000;
   cursor: pointer;
