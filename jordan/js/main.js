@@ -120,18 +120,20 @@ function ChangeSlide(number)
       var imageID = "jo-main"+i;
       var chartID = "chart"+i;
       var vID = "jordan_0" + i + "1";
+      var xID = "main2_2_" + i;
+
       if(i == number){
         document.getElementById(slideID).style.display = "block";
         document.getElementById(imageID).style.display = "block";
         document.getElementById(chartID).style.display = "block";
-        // document.getElementById(vID).style.display = "block";
+        document.getElementById(xID).style.display = "block";
         document.getElementById(buttonID).classList.add('selected');
       }
       else{
         document.getElementById(slideID).style.display = "none";
         document.getElementById(imageID).style.display = "none";
         document.getElementById(chartID).style.display = "none";
-        // document.getElementById(vID).style.display = "none";
+        document.getElementById(xID).style.display = "none";
         document.getElementById(buttonID).classList.remove('selected');
       }
   }
@@ -250,85 +252,106 @@ function redraw (data) {
 
 //y axis transition
 //  d3.select(".y.axis").transition().call(yAxis);
+
 }
 
+$(".about-cover").show();
+$("#enter").remove;
+$("#about").click(function(){
+  $(".about-cover").fadeToggle();
+  $("#enter").remove;
+  // $(".about-cover").css({"opacity": "1"});
+  $(this).text(function(i, text){
+          return text === "SNEAKERS" ? "ABOUT" : "SNEAKERS";
+      })
+});
+
+$("#enter").click(function(){
+  // $(".about-cover").hide();
+  $(".about-cover").fadeToggle();
+  $("#enter .button").remove;
+  // $(".about-cover").css({"opacity": "1"});
+  $("#about").text(function(i, text){
+          return text === "SNEAKERS" ? "ABOUT" : "SNEAKERS";
+      })
+});
 
 d3.select("#group3").on("click", function(d, i) {
     redraw(jordan_031);
     redraw(jordan_031); 
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_031").classed("selected", true);
 });
 d3.select("#group4").on("click", function(d, i) {
     redraw(jordan_041);
     redraw(jordan_041); 
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_041").classed("selected", true);
 });
 d3.select("#group5").on("click", function(d, i) {
     redraw(jordan_051);
     redraw(jordan_051);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_051").classed("selected", true);
 });
 d3.select("#group6").on("click", function(d, i) {
     redraw(jordan_061);
     redraw(jordan_061);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_061").classed("selected", true);
 });
 d3.select("#group7").on("click", function(d, i) {
     redraw(jordan_071);
     redraw(jordan_071);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_071").classed("selected", true);
 });
 d3.select("#group8").on("click", function(d, i) {
     redraw(jordan_081);
     redraw(jordan_081);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_081").classed("selected", true);
 });
 d3.select("#group9").on("click", function(d, i) {
     redraw(jordan_091);
     redraw(jordan_091);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_091").classed("selected", true);
 });
 d3.select("#group10").on("click", function(d, i) {
     redraw(jordan_101);
     redraw(jordan_101);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_101").classed("selected", true);
 });
 d3.select("#group11").on("click", function(d, i) {
     redraw(jordan_111);
     redraw(jordan_111);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_111").classed("selected", true);
 });
 d3.select("#group12").on("click", function(d, i) {
     redraw(jordan_121);
     redraw(jordan_121);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_121").classed("selected", true);
 });
 d3.select("#group13").on("click", function(d, i) {
     redraw(jordan_131);
     redraw(jordan_131);    
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_131").classed("selected", true);
 });
 d3.select("#group14").on("click", function(d, i) {
     redraw(jordan_141);
     redraw(jordan_141);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_141").classed("selected", true);
 });
 d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_151);
     redraw(jordan_151);
-        d3.selectAll(".main2 button").classed("selected", false);
+        d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select("#jordan_151").classed("selected", true);
 });
 
@@ -339,7 +362,7 @@ d3.select("#group15").on("click", function(d, i) {
     document.getElementById("j3").src="img/a_031.png";
     document.getElementById("colorway_03").innerHTML = "<i><b>White Cement:</b> White / Cement Grey</i>";
     redraw(jordan_031);
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
   });
 
@@ -347,7 +370,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_032); 
     document.getElementById("j3").src="img/a_032.png";
     document.getElementById("colorway_03").innerHTML = "<i><b>Black Cement:</b> Black / Cement Grey</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_032); 
   });
@@ -356,7 +379,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_033);
     document.getElementById("j3").src="img/a_0333.png";
     document.getElementById("colorway_03").innerHTML = "<i><b>Fire Red:</b> White / Fire Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_033); 
   });
@@ -365,7 +388,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_034); 
     document.getElementById("j3").src="img/a_034.png";
     document.getElementById("colorway_03").innerHTML = "<i><b>True Blue:</b> White / Cement Grey / True Blue</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_034); 
   });
@@ -376,7 +399,7 @@ d3.select("#group15").on("click", function(d, i) {
     document.getElementById("j4").src="img/a_041.png";
     document.getElementById("colorway_04").innerHTML = "<i><b>White Cement:</b> White / Black</i>";
     redraw(jordan_041);
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
   });
 
@@ -384,7 +407,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_042); 
     document.getElementById("j4").src="img/a_042.png";
     document.getElementById("colorway_04").innerHTML = "<i><b>Black Cement:</b> Black / Cement Grey</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_042); 
   });
@@ -393,7 +416,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_043); 
     document.getElementById("j4").src="img/a_044.png";
     document.getElementById("colorway_04").innerHTML = "<i><b>Fire Red:</b> White / Red / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_043); 
   });
@@ -402,7 +425,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_044);
     document.getElementById("j4").src="img/a_043.png";
     document.getElementById("colorway_04").innerHTML = "<i><b>Military Blue:</b> Off White / Military Blue</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_044); 
   });
@@ -414,7 +437,7 @@ d3.select("#group15").on("click", function(d, i) {
     document.getElementById("j5").src="img/a_051.png";
     document.getElementById("colorway_05").innerHTML = "<i><b>Fire Red:</b> White / Black / Fire Red</i>";
     redraw(jordan_051);
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
   });
 
@@ -422,7 +445,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_052); 
     document.getElementById("j5").src="img/a_052.png";
     document.getElementById("colorway_05").innerHTML = "<i><b>Metallic Silver:</b> Black / Metallic Silver</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_052); 
   });
@@ -431,7 +454,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_053);
     document.getElementById("j5").src="img/a_053.png";
     document.getElementById("colorway_05").innerHTML = "<i><b>Grape:</b> White / Grape Ice / New Emerald</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_053); 
   });
@@ -440,7 +463,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_054); 
     document.getElementById("j5").src="img/a_054.png";
     document.getElementById("colorway_05").innerHTML = "<i><b>Fire Red 23:</b> White / Red / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_054); 
   });
@@ -451,7 +474,7 @@ d3.select("#group15").on("click", function(d, i) {
     document.getElementById("j6").src="img/a_061.png";
     document.getElementById("colorway_06").innerHTML = "<i><b>White Infra Red:</b> White / Infra Red / Black</i>";
     redraw(jordan_061);
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
   });
 
@@ -459,7 +482,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_062); 
     document.getElementById("j6").src="img/a_062.png";
     document.getElementById("colorway_06").innerHTML = "<i><b>Black Infrared:</b> Black / Infra Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_062); 
   });
@@ -468,7 +491,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_063);
     document.getElementById("j6").src="img/a_063.png";
     document.getElementById("colorway_06").innerHTML = "<i><b>Sport Blue:</b> White / Sport Blue / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_063); 
   });
@@ -477,7 +500,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_064); 
     document.getElementById("j6").src="img/a_064.png";
     document.getElementById("colorway_06").innerHTML = "<i><b>Maroons:</b> Off White / NW / Maroon</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_064); 
   });
@@ -486,7 +509,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_065); 
     document.getElementById("j6").src="img/a_065.png";
     document.getElementById("colorway_06").innerHTML = "<i><b>Carmines:</b> White / Carmine / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_065); 
   });
@@ -498,7 +521,7 @@ d3.select("#group15").on("click", function(d, i) {
     document.getElementById("j7").src="img/a_071.png";
     document.getElementById("colorway_07").innerHTML = "<i><b>Olympic:</b> White / Midnight Navy / True Red</i>";
     redraw(jordan_071);
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
   });
 
@@ -506,7 +529,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_072); 
     document.getElementById("j7").src="img/a_072.png";
     document.getElementById("colorway_07").innerHTML = "<i><b>Hare:</b> White / Light Silver / True Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_072); 
   });
@@ -515,7 +538,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_073);
     document.getElementById("j7").src="img/a_073.png";
     document.getElementById("colorway_07").innerHTML = "<i><b>Bordeaux:</b> Black / Light Graphite / Bordeaux</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_073); 
   });
@@ -524,19 +547,10 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_074); 
     document.getElementById("j7").src="img/a_074.png";
     document.getElementById("colorway_07").innerHTML = "<i><b>Raptor:</b> Black / Dark Charcoal / True Rede</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_074); 
   });
-
-  // d3.select("#jordan_075").on("click", function(d, i) {
-  //   redraw(jordan_075); 
-  //   document.getElementById("j7").src="img/a_075.png";
-  //   document.getElementById("colorway_07").innerHTML = "<i><b>Cardinal:</b> White / Black / Cardinal Red</i>";
-  //   d3.selectAll(".main2 button").classed("selected", false);
-  //   d3.select(this).classed("selected", true);
-  //   redraw(jordan_075); 
-  // });
 
 ////////8////////
   d3.select("#jordan_081").on("click", function(d, i) {
@@ -544,7 +558,7 @@ d3.select("#group15").on("click", function(d, i) {
     document.getElementById("j8").src="img/a_081.png";
     document.getElementById("colorway_08").innerHTML = "<i><b>Aqua:</b> Black / Bright Concord / Aqua Tone</i>";
     redraw(jordan_081);
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
   });
 
@@ -552,7 +566,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_082); 
     document.getElementById("j8").src="img/a_082.png";
     document.getElementById("colorway_08").innerHTML = "<i><b>Bugs Bunny:</b> White / Black / True Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_082); 
   });
@@ -561,7 +575,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_083);
     document.getElementById("j8").src="img/a_083.png";
     document.getElementById("colorway_08").innerHTML = "<i><b>Playoff:</b> Black / True Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_083); 
   });
@@ -573,7 +587,7 @@ d3.select("#group15").on("click", function(d, i) {
     document.getElementById("j9").src="img/a_091.png";
     document.getElementById("colorway_09").innerHTML = "<i><b>White Black Red:</b> White / Black / True Red</i>";
     redraw(jordan_091);
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
   });
 
@@ -581,7 +595,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_092); 
     document.getElementById("j9").src="img/a_092.png";
     document.getElementById("colorway_09").innerHTML = "<i><b>Powder Blue:</b> White / Black / Dark Powder Blue</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_092); 
   });
@@ -590,7 +604,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_093);
     document.getElementById("j9").src="img/a_093.png";
     document.getElementById("colorway_09").innerHTML = "<i><b>Olive:</b> Black / Light Olive / True Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_093); 
   });
@@ -599,7 +613,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_094); 
     document.getElementById("j9").src="img/a_094.png";
     document.getElementById("colorway_09").innerHTML = "<i><b>Charcoal:</b> Black / Dark Charcoal / True Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_094); 
   });
@@ -609,7 +623,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_101);
     document.getElementById("j10").src="img/a_101.png";
     document.getElementById("colorway_10").innerHTML = "<i><b>Steel:</b> White / Black / Light Steel Grey</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_101); 
   });
@@ -618,7 +632,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_102); 
     document.getElementById("j10").src="img/a_102.png";
     document.getElementById("colorway_10").innerHTML = "<i><b>Powder:</b> White / Black / Dark Powder Blue</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_102); 
   });
@@ -627,7 +641,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_103);
     document.getElementById("j10").src="img/a_103.png";
     document.getElementById("colorway_10").innerHTML = "<i><b>Shadows:</b> Black / Dark Shadow / True Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_103); 
   });
@@ -636,7 +650,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_104); 
     document.getElementById("j10").src="img/a_104.png";
     document.getElementById("colorway_10").innerHTML = "<i><b>Chicago Bulls:</b> White / Black / True Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_104); 
   });
@@ -646,7 +660,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_111);
     document.getElementById("j11").src="img/a_111.png";
     document.getElementById("colorway_11").innerHTML = "<i><b>Concord:</b> White / Columbia Blue / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_111); 
   });
@@ -655,7 +669,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_112); 
     document.getElementById("j11").src="img/a_112.png";
     document.getElementById("colorway_11").innerHTML = "<i><b>Columbia:</b> White / Columbia Blue / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_112); 
   });
@@ -664,7 +678,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_113);
     document.getElementById("j11").src="img/a_113.png";
     document.getElementById("colorway_11").innerHTML = "<i><b>Bred:</b> Black / True Red / White</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_113); 
   });
@@ -673,7 +687,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_114); 
     document.getElementById("j11").src="img/a_114.png";
     document.getElementById("colorway_11").innerHTML = "<i><b>Space Jam:</b> Black / Varsity Royal / White</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_114); 
   });
@@ -683,7 +697,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_121);
     document.getElementById("j12").src="img/a_121.png";
     document.getElementById("colorway_12").innerHTML = "<i><b>Taxi:</b> White / Black / Taxi</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_121); 
   });
@@ -692,7 +706,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_122); 
     document.getElementById("j12").src="img/a_122.png";
     document.getElementById("colorway_12").innerHTML = "<i><b>White Red:</b> White / Varsity Red / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_122); 
   });
@@ -701,7 +715,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_123);
     document.getElementById("j12").src="img/a_123.png";
     document.getElementById("colorway_12").innerHTML = "<i><b>Obsidian:</b> Obsidian / White / French Blue</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_123); 
   });
@@ -710,7 +724,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_124); 
     document.getElementById("j12").src="img/a_124.png";
     document.getElementById("colorway_12").innerHTML = "<i><b>Bred:</b> Black / Varsity Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_124); 
   });
@@ -719,7 +733,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_125); 
     document.getElementById("j12").src="img/a_125.png";
     document.getElementById("colorway_12").innerHTML = "<i><b>Playoff:</b> Black / Varsity Red / White / Metallic Silver</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_125); 
   });
@@ -729,7 +743,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_131);
     document.getElementById("j13").src="img/a_131.png";
     document.getElementById("colorway_13").innerHTML = "<i><b>Black Toe:</b> White / True Red / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_131); 
   });
@@ -738,7 +752,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_132); 
     document.getElementById("j13").src="img/a_132.png";
     document.getElementById("colorway_13").innerHTML = "<i><b>Playoff:</b> Black / True Red / White</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_132); 
   });
@@ -747,7 +761,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_133);
     document.getElementById("j13").src="img/a_133.png";
     document.getElementById("colorway_13").innerHTML = "<i><b>Flint:</b> Navy / Carolina Blue / Flint Grey / White</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_133); 
   });
@@ -756,7 +770,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_134); 
     document.getElementById("j13").src="img/a_134.png";
     document.getElementById("colorway_13").innerHTML = "<i><b>White Red:</b> White / Black / True Red / Pearl Grey</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_134); 
   });
@@ -765,7 +779,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_135); 
     document.getElementById("j13").src="img/a_135.png";
     document.getElementById("colorway_13").innerHTML = "<i><b>Bred:</b> Black / Varsity Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_135); 
   });
@@ -775,7 +789,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_141);
     document.getElementById("j14").src="img/a_141.png";
     document.getElementById("colorway_14").innerHTML = "<i><b>Black Toe:</b> White / Black / Varsity Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_141); 
   });
@@ -784,7 +798,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_142); 
     document.getElementById("j14").src="img/a_142.png";
     document.getElementById("colorway_14").innerHTML = "<i><b>Candy Cane:</b> White / Black / Varsity Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_142); 
   });
@@ -793,7 +807,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_143);
     document.getElementById("j14").src="img/a_143.png";
     document.getElementById("colorway_14").innerHTML = "<i><b>Oxy:</b> White / Black / Oxidized Green</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_143); 
   });
@@ -802,7 +816,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_144); 
     document.getElementById("j14").src="img/a_144.png";
     document.getElementById("colorway_14").innerHTML = "<i><b>Bred:</b> Black / Varsity Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_144); 
   });
@@ -811,7 +825,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_145); 
     document.getElementById("j14").src="img/a_145.png";
     document.getElementById("colorway_14").innerHTML = "<i><b>Indiglo:</b> Black / White / Indiglo</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_145); 
   });
@@ -821,7 +835,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_151);
     document.getElementById("j15").src="img/a_151.png";
     document.getElementById("colorway_15").innerHTML = "<i><b>Stealth:</b> Black / Varsity Red</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_151); 
   });
@@ -830,7 +844,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_152); 
     document.getElementById("j15").src="img/a_152.png";
     document.getElementById("colorway_15").innerHTML = "<i><b>Columbia Blue:</b> White / Columbia Blue / Black</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_152); 
   });
@@ -839,7 +853,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_153);
     document.getElementById("j15").src="img/a_153.png";
     document.getElementById("colorway_15").innerHTML = "<i><b>Flint Grey:</b> Flint Grey / White</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_153); 
   });
@@ -848,7 +862,7 @@ d3.select("#group15").on("click", function(d, i) {
     redraw(jordan_154);
     document.getElementById("j15").src="img/a_154.png";
     document.getElementById("colorway_15").innerHTML = "<i><b>Obsidian:</b> Obsidian / White / Metallic Silver</i>";
-    d3.selectAll(".main2 button").classed("selected", false);
+    d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_154); 
   });
