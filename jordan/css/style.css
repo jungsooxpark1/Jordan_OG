@@ -369,6 +369,17 @@ outline:0;
   /*text-align: center;*/
 }
 
+#rnp {
+  /*display: inherit;*/
+  /*position: relative;*/
+  position: absolute;
+  /*position: static;*/
+  display: inherit;
+  padding-left: 15px;
+  color: #666;
+
+}
+
 #about {
   float: right;
 /*  display: inline-block;
