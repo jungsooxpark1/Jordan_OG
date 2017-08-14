@@ -499,7 +499,7 @@ d3.select("#group15").on("click", function(d, i) {
   d3.select("#jordan_064").on("click", function(d, i) {
     redraw(jordan_064); 
     document.getElementById("j6").src="img/a_064.png";
-    document.getElementById("colorway_06").innerHTML = "<i><b>Maroons:</b> Off White / NW / Maroon</i>";
+    document.getElementById("colorway_06").innerHTML = "<i><b>Maroon:</b> Off White / NW / Maroon</i>";
     d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_064); 
@@ -508,7 +508,7 @@ d3.select("#group15").on("click", function(d, i) {
   d3.select("#jordan_065").on("click", function(d, i) {
     redraw(jordan_065); 
     document.getElementById("j6").src="img/a_065.png";
-    document.getElementById("colorway_06").innerHTML = "<i><b>Carmines:</b> White / Carmine / Black</i>";
+    document.getElementById("colorway_06").innerHTML = "<i><b>Carmine:</b> White / Carmine / Black</i>";
     d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_065); 
@@ -640,7 +640,7 @@ d3.select("#group15").on("click", function(d, i) {
   d3.select("#jordan_103").on("click", function(d, i) {
     redraw(jordan_103);
     document.getElementById("j10").src="img/a_103.png";
-    document.getElementById("colorway_10").innerHTML = "<i><b>Shadows:</b> Black / Dark Shadow / True Red</i>";
+    document.getElementById("colorway_10").innerHTML = "<i><b>Shadow:</b> Black / Dark Shadow / True Red</i>";
     d3.selectAll(".main2_2 .button").classed("selected", false);
     d3.select(this).classed("selected", true);
     redraw(jordan_103); 
