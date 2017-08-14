@@ -256,10 +256,11 @@ function redraw (data) {
 }
 
 $(".about-cover").show();
-$("#enter").remove;
+
 $("#about").click(function(){
+  $("#enter").remove(); 
   $(".about-cover").fadeToggle();
-  $("#enter").remove;
+  // $("#enter").css({"opacity": "0"});
   // $(".about-cover").css({"opacity": "1"});
   $(this).text(function(i, text){
           return text === "SNEAKERS" ? "ABOUT" : "SNEAKERS";
@@ -268,9 +269,10 @@ $("#about").click(function(){
 
 $("#enter").click(function(){
   // $(".about-cover").hide();
+  $("#enter").remove;
   $(".about-cover").fadeToggle();
-  $("#enter .button").remove;
-  // $(".about-cover").css({"opacity": "1"});
+   
+  // $("#enter").css({"opacity": "0"});
   $("#about").text(function(i, text){
           return text === "SNEAKERS" ? "ABOUT" : "SNEAKERS";
       })
