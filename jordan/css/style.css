@@ -188,7 +188,7 @@ p {
 
 .main2_2 {
     position: static;
-    display: inherit;
+    display: block;
     width: 500px;
     height: 100px;
     justify-content: center;
@@ -279,6 +279,7 @@ p {
   color: black;
   width: 2.5em;
   height: 2.5em;
+  /*padding-top: 0.3em;*/
   padding-top: 0.3em;
   outline: none;
   border-radius: 100%;
@@ -286,7 +287,7 @@ p {
   font-family: 'Oswald', sans-serif;
   font-size: 0.8em;
   font-weight: 300;
-  margin: 0.4em;
+  margin: 0em;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.97);
 }
@@ -331,19 +332,21 @@ outline:0;
   margin-bottom: 0px;
 }
 
-.main2_2 .button span {
+/*.main2_2 .button span {
   display: inline-block;
-  position: relative;  
-  /*  position: absolute; 
-  display: block;*/
+  position: relative;   
   padding-top: 0px;
   padding-right: 0px;
-}
+}*/
+
 .main2_2 .button span:after {
-  content: url(path.png); 
+  content: url(check1.svg); 
+  /*content: url(check.png); */
+
  /* position: absolute;
   display: block;*/
   width: 20px;
+  /*width: 5px;*/
   /*vertical-align: middle;*/
   /*width: 15px;*/ 
    /*position: absolute;
@@ -363,7 +366,7 @@ outline:0;
 }
 
 .main2_2 .button:focus {
-  outline:3;
+  outline: 3;
 }
 
 #logo1 {
@@ -373,6 +376,7 @@ outline:0;
   float: center;
   /*position: relative;*/
   vertical-align: middle;
+  margin-left: 3.6em;
   /*text-align: center;*/
 }
 
@@ -389,8 +393,6 @@ outline:0;
 
 #about {
   float: right;
-/*  display: inline-block;
-  position: relative;*/
   position: static;
   display: inherit;
   font-family: 'PT Sans Narrow', 'Oswald', sans-serif;
@@ -399,14 +401,16 @@ outline:0;
   color: #555;
   /*top:0px;*/
   vertical-align: middle;
-  margin-top: -33px; 
-  margin-right: 10px;
+  /*margin-bottom: 6px; */
+/*  margin-top: -39px; 
+  margin-bottom: 2px;
+  margin-right: 2px;*/
   background-color: rgba(208, 2, 27, 0);
   border: 0px solid #000;
   cursor: pointer;
-  height: 2.4em;
+  height: 2.5em;
   width: 4.8em;
-  padding-top: 5px;
+  padding-top: 0.4em;
   text-align: center;
   border-radius: 0px;
 }
