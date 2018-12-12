@@ -340,8 +340,8 @@ outline:0;
 }
 
 .main2_2 .button span:after {
-  content: url(check1.svg);
-  /*content: url(https://github.com/jungsooxpark1/Jordan_OG/blob/master/jordan/css/check1.svg);*/
+  /*content: url(check1.svg);*/
+  content: url(https://github.com/jungsooxpark1/Jordan_OG/blob/master/jordan/css/check1.svg);
   width: 20px;
   opacity: 0;
   transition: 0.5s;
