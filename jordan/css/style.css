@@ -340,19 +340,9 @@ outline:0;
 }*/
 
 .main2_2 .button span:after {
-  /* content: url(check.svg); */
   content: url(path.png);
-
- /* position: absolute;
-  display: block;*/
+  content: url(check1.svg);
   width: 20px;
-  /*width: 5px;*/
-  /*vertical-align: middle;*/
-  /*width: 15px;*/ 
-   /*position: absolute;
-  display: block;*/
-  /*width: 20px;
-  vertical-align: middle;*/
   opacity: 0;
   transition: 0.5s;
 }
