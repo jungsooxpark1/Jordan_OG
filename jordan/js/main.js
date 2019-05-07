@@ -267,16 +267,16 @@ $("#about").click(function(){
       })
 });
 
-$("#enter").click(function(){
-  // $(".about-cover").hide();
-  $("#enter").remove;
-  $(".about-cover").fadeToggle();
+// $("#enter").click(function(){
+//   // $(".about-cover").hide();
+//   $("#enter").remove();
+//   $(".about-cover").fadeToggle();
    
-  // $("#enter").css({"opacity": "0"});
-  $("#about").text(function(i, text){
-          return text === "SNEAKERS" ? "ABOUT" : "SNEAKERS";
-      })
-});
+//   // $("#enter").css({"opacity": "0"});
+//   $("#about").text(function(i, text){
+//           return text === "SNEAKERS" ? "ABOUT" : "SNEAKERS";
+//       })
+// });
 
 d3.select("#group3").on("click", function(d, i) {
     redraw(jordan_031);
