@@ -1,5 +1,7 @@
 var maxH = 230;
 var maxW = 920;
+var enter;
+var about;
 
 // var margin = {top:12, bottom:40, left:25, right:80};
 var margin = {top:12, bottom:35, left:35, right:35};
