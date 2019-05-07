@@ -342,8 +342,8 @@ outline:0;
 }
 
 .main2_2 .button span:after {
-  /*content: url(check1.svg);*/
-  content: url(check.png); 
+  content: url(check1.svg);
+/*   content: url(check.png);  */
 
  /* position: absolute;
   display: block;*/
